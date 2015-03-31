@@ -1,0 +1,1329 @@
+/*Base Rules
+===============================================*/
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'gothambold';
+	src: url('../fonts/gothambold.eot');
+	src: local('gothambold'), 
+	url('../fonts/gothambold.woff') format('woff'), 
+	url('../fonts/gothambold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GothamBook';
+	src: url('../fonts/GothamBook.eot');
+	src: local('GothamBook'), 
+	url('../fonts/GothamBook.woff') format('woff'), 
+	url('../fonts/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GothamLight';
+	src: url('../fonts/GothamLight.eot');
+	src: local('GothamLight'), 
+	url('../fonts/GothamLight.woff') format('woff'), 
+	url('../fonts/GothamLight.ttf') format('truetype');
+}
+
+html{
+
+	font-family: 'GothamLight';
+	font-size: 16px;
+
+	color: #b8b8b8;
+
+	/*background-color: brown;*/
+}
+
+h1{
+	font-size: 3em;  /*48px*/
+}
+
+h2,
+h3{
+	margin: 0;
+}
+
+h3{
+	font-size: 1.250em;
+}
+
+
+a{
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
+}
+
+img{
+	max-width: 100%;
+}
+
+li{
+	list-style-type: none;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+::-webkit-input-placeholder{
+	font-size: 0.938em; /*15px*/
+}
+
+button,
+input{
+	font-family: 'GothamLight';
+}
+
+button,
+button:active,
+button:focus,
+input{
+	outline: none;
+}
+
+
+
+
+
+/*Layout
+========================================================*/
+.site-wrapper{
+	max-width: 960px;
+	padding:0 1%;
+}
+
+.site-wrapper,
+.home__tagline,
+.cta-content,
+.twitter-section__content,
+.newsletter-content{
+	margin: 0 auto;
+}
+
+
+
+/*backgrounds
+==========================================================*/
+
+.home{
+	background-color: #0b0910;
+	background-image: url("../images/backgrounds/bg1.jpg");
+}
+
+.services,
+.blog-posts__item,
+.portfolio,
+.contact{
+	background-color: #fff;
+}
+
+.blog-posts__item__image{
+	background-color: #dbdada;
+}
+
+.blog,
+.skills{
+	background-color: #eaeaea;
+}
+
+.cta{
+	background-color: #271419;
+	background-image: url("../images/backgrounds/bg2.jpg");
+}
+
+.twitter-section{
+	background-color: #324f52;
+	background-image: url("../images/backgrounds/bg4.jpg");
+
+}
+
+.newsletter{
+	background-color: #eeeeee;
+
+}
+
+.main-footer{
+	background-color: #e2e2e2;
+}
+
+.home,
+.cta,
+.twitter-section{
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+/*Layout
+==========================================================*/
+.main-header{
+	padding-top: 38px;
+	padding-bottom: 38px;
+	margin-bottom: 115px;
+}
+
+.home{
+	padding-bottom: 18px;
+}
+
+.services,
+.skills{
+	padding-top: 83px;
+}
+
+.services{
+	padding-bottom: 90px;
+}
+
+.blog,
+.contact{
+	padding-top: 77px;
+}
+
+.blog{
+	padding-bottom: 42px;
+}
+
+.cta{
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+
+.portfolio{
+	padding-top: 106px;
+	padding-bottom: 93px;
+}
+
+.skills{
+	padding-bottom: 83px;
+}
+
+.twitter-section{
+	padding-top: 70px;
+}
+
+.twitter-section,
+.contact{
+	padding-bottom: 70px;
+}
+.newsletter{
+	padding-top: 50px;
+	padding-bottom:50px;
+}
+
+.main-footer{
+	padding-top: 29px;
+	padding-bottom: 29px;
+}
+
+.main-header,
+.portfolio,
+.contact,
+.main-footer,
+.skills,
+.blog,
+.blog-posts,
+.portfolio-container,
+.dropdown-menu-closed{
+	overflow: hidden;
+}
+
+
+
+
+
+/*Modules
+==================================*/
+.main-nav,
+.home__heading,
+.home__cta,
+.home__scroll-indicator,
+.cta-content,
+.twitter-section__content{
+	text-align:center;
+}
+
+.main-nav{
+	text-align: right;
+}
+
+.logo,
+.section-heading,
+.services-list-item,
+.services-list__item__icon,
+.services-list__item__text-container,
+.blog-posts__item,
+.portfolio__item,
+.contact__map,
+.contact__form__container,
+.contact__info,
+.main-footer__content,
+.main-footer__social__content,
+.dropdown-menu__selected-category{
+	float: left;
+}
+
+.main-nav,
+.skills-list,
+.contact .section-heading,
+.contact__form__container,
+.main-footer__social,
+.blog__cta-button,
+.contact__form .button,
+.main-footer__social__links,
+.dropdown-menu-closed,
+.dropdown-menu,
+.dropdown-menu__arrow{
+	float: right;
+}
+
+.services-list,
+.blog-posts,
+.services-list,
+.contact__info{
+	clear: left;
+}
+
+.main-nav__list__item,
+.portfolio__item__tags,
+.main-nav__button,
+.services-list__item,
+.skills-list__item,
+.portfolio__item__tag,
+.contact__form__label,
+.main-footer__social__link{
+	display: inline-block;
+}
+.portfolio__item__image-container,
+.newsletter-content__signup,
+.dropdown-menu{
+	position: relative;
+}
+
+
+
+.portfolio__item{
+	margin-bottom: 4%;
+}
+
+.portfolio__item__title {
+	margin-top: 4%;
+}
+
+
+
+
+
+.cta-button,
+.scroll-indicator__scrolldown,
+.cta-content__title,
+.twitter-section__content__twitter-handler,
+.twitter-section__content__twitter-link,
+.newsletter-content__signup__button{
+	color: #fff;
+}
+
+
+.main-nav__link{
+	color: #b0b0b0;
+}
+
+.home__tagline{
+	color: #8a97a5;
+}
+
+.section__title,
+.portfolio__item__title,
+.dropdown-menu__list__item{
+	color: #828282;
+}
+
+
+.blog-post-posts__item__title{
+	color: #8e8e8e;
+}
+
+
+.services-list__item__title
+{
+	color: #444;
+}
+
+
+.services-list__item__description{
+	color: #bababa;
+}
+
+.cta-content__text{
+	color:#999;
+}
+
+
+.twitter-section__content__twitter-post{
+	color:#c6c6c6;
+}
+
+
+
+.contact__form__input::-webkit-input-placeholder{
+	color: #666667;
+	opacity: 0.2;
+}
+
+
+.newsletter-content__heading{
+	color:#aaa;
+}
+
+.newsletter__content{
+	color: #9ba8b1;
+}
+
+.newsletter-content__signup__input::-webkit-input-placeholder {
+	color: #d4dadf;
+}
+
+
+
+.main-footer__content{
+	color: #8c8c8c;
+}
+
+
+
+.main-footer__copyright{
+	color: #6b6b6b;
+}
+
+
+
+.main-footer__social{
+	color: #b7b7b7;
+}
+
+
+
+
+.button,
+.skills-list__item,
+.twitter-section__content__twitter-post-time,
+.contact__form__label,
+.contact__info__span,
+.main-footer__copyright__master,
+.portfolio__item__tag:hover{
+	color:#0bb697;
+}
+
+.portfolio__item__tag,
+.dropdown-menu{
+	cursor: pointer;
+}
+
+
+.scroll-indicator__scrolldown{
+	font-size:0.625em; /*10px*/
+	opacity: 0.15;
+}
+
+.blog-posts__cta .button{
+	font-size: 0.654em; /*10.46px*/
+	padding: 12px 6%;
+}
+
+.main-nav__button{
+	font-size: 0.688em; /*11px*/
+}
+
+
+.services-list__item__description,
+.portfolio__item__tag,
+.twitter-section__content__twitter-post-time{
+	font-size: 0.750em; /*12px*/
+}
+
+.contact__form__label{
+	font-size:0.806em; /*12.9px*/
+	margin: 4% 0;
+} 
+
+
+
+.main-nav__list__item,
+.blog-posts__item__description,
+.contact__info,
+.main-footer{
+	font-size:0.875em; /*14px*/
+}
+
+.twitter-section__content__twitter-link{
+	font-size:0.906em ; /*14.5px*/
+}
+
+
+
+.dropdown-menu-closed,
+.dropdown-menu__list,
+.newsletter__content
+{
+	font-size:0.938em; /*15px*/
+}
+
+.blog h3,
+.cta-content__text,
+.twitter-section__content__twitter-post,
+.skills-list__item{
+	font-size: 1.125em; /*18px*/
+}
+
+.home__tagline{
+	font-size: 1.250em; /*20px*/
+}
+
+.twitter-section__content__twitter-handler{
+	font-size:1.313em; /*21px*/
+}
+
+
+.newsletter-content__heading{
+	font-size: 1.5em; /*24px*/
+}
+
+.services h2,
+.blog h2{
+	font-size: 1.750em; /*28px*/
+}
+
+.portfolio h2,
+.skills h2,
+.contact h2,
+.cta-content__title{
+	font-size: 1.875em; /*30px*/
+}
+
+.services h2,
+.blog h2,
+
+.blog-post-posts__item__title,
+.blog__cta-button .button,
+.newsletter-content__signup__button{
+	font-family: 'GothamBook';
+}
+
+
+
+
+.main-nav__button .cta-button,
+.portfolio__item__image__overlay,
+.newsletter-content__signup__button,
+.contact__form .button:hover,
+.blog .button:hover{
+	background-color: #0bb697;
+	border:none;
+	
+}
+
+
+.home__title,
+.blog .button,
+.dropdown-menu{
+	text-transform: uppercase;
+}
+
+.main-nav{
+	width: 80%;
+}
+
+.main-nav__list__item{
+	margin-right: 2%;
+	border:1px solid transparent;
+}
+
+.main-nav__list__item,
+.contact__form .button,
+.blog .button,
+.main-footer__social__link__facebook-icon,
+.main-footer__social__link__twitter-icon,
+.main-footer__social__link__forrst-icon,
+.main-footer__social__link__dribbble-icon,
+.dropdown-menu__list__item{
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.cta-button,
+.main-nav__list__item{
+	padding: 10px 13px;
+}
+
+.cta-button,
+.blog__cta-button .button,
+.main-nav__list__item,
+.skills-list__item,
+.contact__form__input,
+.newsletter-content__signup__input,
+.newsletter-content__signup__button,
+.blog-posts__item,
+.contact__form .button{
+	border-radius: 4px;
+}
+
+.main-nav__button .cta-button{
+	text-shadow: 0px 2px 2px rgba(0, 1, 0, 0.15);
+	box-shadow: inset 0px 7px 0px -6px #51ffdf;
+	-webkit-box-shadow: inset 0px 7px 0px -6px #51ffdf;
+	-moz-box-shadow: inset 0px 7px 0px -6px #51ffdf;
+	-o-box-shadow: inset 0px 7px 0px -6px #51ffdf;
+}
+
+
+.home__tagline{
+	width: 80%
+}
+
+.home__cta{
+	margin-top: 34px;
+	margin-bottom: 55px;
+}
+
+.cta-button--transparent{
+	padding: 20px 4%;
+	border:1px solid #fff;
+}
+
+
+
+.cta-button--transparent,
+.blog-posts__cta .button,
+.button--big,
+.contact__form .button{
+	background-color: transparent;
+	
+}
+
+.mobile-menu__icon__container{
+	position: absolute;
+	left: 85%;
+}
+
+.blog-posts__cta .button{
+	text-transform: inherit;
+}
+
+.blog-posts__item__image{
+	height: 180px;
+}
+
+.blog-posts__item__description{
+	line-height: 23px;
+}
+
+
+.services-list__item__icon{
+	margin-right: 8%;
+}
+
+
+.services .section-heading,
+.blog .section-heading{
+	width: 57%
+}
+
+.services-list__item{
+	margin-left: 2%;
+	margin-right: 1%;
+	margin-top: 50px;
+}
+
+.services-list__item:nth-child(3n),
+.blog-posts__item:nth-child(3n),
+.portfolio__item:nth-child(3n){
+	margin-right: 0;
+}
+
+
+
+
+.blog-posts,
+.portfolio-container,
+.skills .section-heading{
+	padding-top: 45px;
+}
+
+
+
+.blog-posts__item__content{
+	padding: 19px 7%;
+}
+
+.blog-posts__cta .button,
+.blog__cta-button .button,
+.skills-list__item,
+.contact__form .button{
+	border:2px solid #0bb697;
+}
+
+.button--big{
+	width: 232px;
+	padding: 19px 15px;
+}
+
+
+.portfolio .section-heading,
+.skills .section-heading,
+.contact .section-heading,
+.contact__map,
+.contact__form__container{
+	width: 49%;
+}
+
+.portfolio-container{
+	width: 97%;
+}
+
+.fa-search{
+  position: absolute;
+  font-size: 1.5em;
+  top: 45%;
+  left: 45%;
+  color: #fff;
+  z-index: 20;
+  opacity: 0;
+}
+
+
+.portfolio__item__image__overlay__circle{
+  	position: absolute;
+  	width: 30%;
+  	height: 30%;
+  	border: 2px solid #fff;
+  	border-radius: 50%;
+  	z-index: 15;
+  	left: 34%;
+  	top: 34%;
+}
+
+
+.portfolio__item__image__overlay,
+.portfolio__item__image__overlay__circle{
+	opacity: 0;
+	-webkit-transition: opacity .3s ease;
+	-o-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+
+}
+
+
+.dropdown-menu{
+	width: 200px;
+
+}
+
+.dropdown-menu-closed{
+	width: 100%;
+	border: 2px solid #eaeaea;
+	padding: 0 5%;
+}
+
+
+
+.dropdown-menu__list__item{
+		text-indent: 5%;
+		padding: 7px 0;
+		-webkit-transition: background-color .2s ease;
+		-o-transition: background-color .2s ease;
+		transition: background-color .2s ease;
+}
+
+
+.dropdown-menu__arrow{
+	padding-top: 20px;
+}
+
+
+
+.skills-list{
+	width: 420px;
+
+}
+
+.services-list__item{
+	width: 30%;
+}
+
+.blog-posts__item,
+.portfolio__item{
+	width: 32%;
+	margin-right: 2%;
+}
+
+
+
+.services-list__item__text-container{
+	width: 63%;
+}
+
+
+.portfolio__item__image-container:hover .portfolio__item__image__overlay,
+.blog-posts__item__image,
+.contact__form__input,
+.portfolio__item__image{
+	width: 100%;
+}
+
+
+.skills-list__item{
+	padding: 22px 0;
+	margin-left: 4%;
+	margin-top: 4%;
+}
+
+.skills-list__item:nth-child(-n+2){
+	padding-left:9%;
+	padding-right: 9%; /*22px*/
+}
+
+.skills-list__item:nth-child(n+3):nth-child(-n+4){
+	padding-left: 6%;
+	padding-right: 6%; /*19px*/
+}
+
+.skills-list__item:last-child{
+	padding-left: 7%;
+	padding-right: 7%;
+}
+
+.contact__form__input{
+	border: 2px solid #eee;
+}
+
+
+.contact .section-heading{
+	margin-bottom: 2%;
+}
+
+
+.contact__form__input{
+	padding: 3%;
+}
+
+.contact__form__label:after{
+	content: '*';
+	color: red;
+}
+
+
+.contact__form__input[name="Your Message"]{
+	padding-bottom: 22%;
+	resize: none;
+	font-family: 'GothamLight';
+}
+
+.contact__form .button{
+	padding:17px 9%;
+	margin-top: 8%;
+}
+
+
+.contact__info{
+	width: 49%;
+}
+
+
+
+.newsletter-content{
+	width: 70%;
+}
+
+.newsletter-content__signup__button{
+	padding: 15px 3%;
+	margin-left: 2%;
+	box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.3), 0px 2px 2px rgba(0, 0, 0, 0.25);
+	position: relative;
+}
+
+.newsletter-content__signup__button:active{
+	position: relative; 
+	top: 3px;
+	box-shadow: inset 0px -3px 1px #0bb697, inset 0 0px 3px rgba(0, 0, 0, 0.9);
+}
+
+
+.newsletter-content__signup__input{
+	width: 73%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #f8f8f8;
+	border: 2px solid transparent;
+	padding-left: 10%;
+}
+
+
+.subscribe-mail-icon:before{
+	content: url('../images/icons/subscribe-mail-icon.png');
+	position: absolute;
+	left: 4%;
+	top: 15px;
+}
+
+.main-footer__social{
+	margin-top: 3%;
+}
+
+.main-footer__social__content{
+	margin-top: 6px;
+}
+
+.main-footer__social__link{
+	height: 24px;
+	width: 24px;
+}
+
+.main-footer__social__link__facebook-icon,
+.main-footer__social__link__twitter-icon,
+.main-footer__social__link__forrst-icon,
+.main-footer__social__link__dribbble-icon{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.main-footer__social__link__facebook-icon{
+	background-image: url('../images/social-icons/facebook-normal.png');
+}
+
+.main-footer__social__link__twitter-icon{
+	background-image: url('../images/social-icons/twitter-normal.png');
+}
+
+.main-footer__social__link__forrst-icon{
+	background-image: url('../images/social-icons/forrst-normal.png');
+}
+
+.main-footer__social__link__dribbble-icon{
+	background-image: url('../images/social-icons/dribbble-normal.png');
+}
+
+
+
+
+
+
+
+
+/*State
+=======================================*/
+.main-nav__list__item:hover{
+	border:1px solid #fff;
+	border-radius:3px;
+}
+
+.main-nav__list__item:hover .main-nav__link{
+	color:#fff;
+}
+
+.portfolio__item__image-container:hover .portfolio__item__image__overlay{
+	position: absolute;
+	height: 100%;
+	opacity: 1;
+}
+
+.portfolio__item__image-container:hover  .portfolio__item__image__overlay__circle,
+.portfolio__item__image-container:hover .fa-search{
+	opacity: .7;
+}
+
+.dropdown-menu__list--hidden{
+	position: absolute;
+	top: 100%;
+	/*opacity: 0;*/
+	display: none;
+	background-color: #f5f5f5;
+	padding: 15px 0;
+	width: 100%;
+	z-index: 10;
+	box-shadow: 0px 7px 3px -2px rgba(0,0,0,0.3);
+}
+
+  
+.dropdown-menu__list__item:hover{
+	background-color: #0bb697;
+	color: #fff;
+}
+
+
+
+.contact__form .button:hover,
+.blog .button:hover{
+	color: #fff;
+	border:2px solid transparent;
+}
+
+.contact__form__input:focus,
+.newsletter-content__signup__input:focus{
+	border-color: #0bb697;
+	border-color: rgba(11, 182, 151, 0.4);
+	outline: none;
+}
+
+.contact__info--mobile,
+.mobile-menu__icon,
+.mobile-menu__close-icon{
+	display: none;
+}
+
+.main-footer__social__link__facebook-icon:hover{
+	background-image: url('../images/social-icons/facebook-hover.png');
+
+}
+
+.main-footer__social__link__twitter-icon:hover{
+	background-image: url('../images/social-icons/twitter-hover.png');
+}
+
+.main-footer__social__link__forrst-icon:hover{
+	background-image: url('../images/social-icons/forrst-hover.png');
+}
+
+.main-footer__social__link__dribbble-icon:hover{
+	background-image: url('../images/social-icons/dribbble-hover.png');
+}
+
+
+
+
+/*========================================================================
+Medium Screen Size
+========================================================================*/
+
+@media screen and (max-width: 940px){
+	.logo,
+	.main-nav,
+	.services-list__item__icon,
+	.services-list__item__text-container,
+	.section-heading,
+	.blog-posts__item,
+	.blog__cta-button,
+	.dropdown-menu,
+	.dropdown-menu-closed,
+	.skills-list,
+	.contact .section-heading,
+	.contact__map,
+	.contact__info,
+	.contact__form__container,
+	.contact__form .button,
+	.main-footer__content,
+	.main-footer__social__content,
+	.main-footer__social__links,
+	.main-footer__social{
+		float: none;
+
+	}
+
+	.logo,
+	.main-nav,
+	.services-list__item__icon,
+	.services-list__item__text-container,
+	.portfolio__item,
+	.section-heading,
+	.blog__cta-button,
+	.skills-list__item,
+	.newsletter-content,
+	.contact__form__submit-button,
+	.contact__info--mobile,
+	.main-footer__content,
+	.main-footer__social{
+		text-align: center;
+	}
+
+	.section-heading,
+	.services-list,
+	.dropdown-menu,
+	.portfolio-container,
+	.skills-list,
+	.blog-posts__item,
+	.contact__map,
+	.contact__info,
+	.contact__form__container,
+	.newsletter-content__signup__button{
+		margin: 0 auto;
+	}
+
+	.main-nav,
+	.services-list__item__text-container{
+		width: auto;
+	}
+
+	.services-list__item__icon{
+		margin-right: 0;
+	}
+
+	
+
+	
+
+	.logo{
+		margin-bottom: 30px;
+	}
+
+	.section-heading,
+	.services .section-heading, 
+	.blog .section-heading,
+	.portfolio .section-heading, 
+	.skills .section-heading, 
+	.contact .section-heading{
+		width: 70%;
+	}
+
+		.blog .section-heading,
+	.portfolio .section-heading, 
+	.skills .section-heading, 
+	.contact .section-heading{
+		margin-bottom: 15%;
+	}
+
+
+	.services-list{
+		width: 97%;
+	}
+
+	.services-list__item,
+	.portfolio__item{
+		width: 46%;
+	}
+
+	.twitter-section__content,
+	.cta-content{
+		width: 80%;
+	}
+
+	.services-list__item__text-container{
+		padding: 0 15%;
+	}
+
+
+	.portfolio-container{
+		margin-top: 5%;
+	}
+
+	
+
+
+	.portfolio__item{
+		margin-right: 2%;
+		margin-left: 2%;
+		margin-top: 5%;
+	}
+
+	.portfolio__item:nth-child(3n){
+		margin-right: 2%;
+	}
+	
+	
+
+	.blog-posts__item{
+		width: 80%;	
+		margin-bottom: 40px;
+	}
+
+	.blog-posts__item:nth-child(3n){
+		margin-right: auto;
+	}
+
+
+
+	.newsletter-content__signup__button,
+	.contact__info--mobile{
+		display:block;
+	}
+
+	
+	
+	.contact__info--desktop{
+		display: none;
+	}
+
+	.newsletter-content__signup__input{
+		width: 100%;
+	}
+
+	.newsletter-content__signup__button{
+		width: 60%;
+	}
+	
+	.portfolio__item,
+	.newsletter-content__signup__button,
+	.main-footer__social{
+		margin-top: 5%;
+	}
+	
+
+}
+
+
+@media screen and (max-width: 620px){
+		
+	body {
+		margin: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+
+	.main-header{
+		margin-bottom: 0;
+	}
+
+
+	
+	.services .section-heading, 
+	.blog .section-heading,
+	.portfolio .section-heading, 
+	.skills .section-heading, 
+	.contact .section-heading{
+		width: 90%;
+	}
+
+	.services-list__item,
+	.contact__form__container,
+	.contact__info--mobile{
+		width: 80%;
+	}
+
+
+
+
+
+	.mobile-menu__close-icon,
+	.mobile-menu__icon,
+	.main-nav__list__item,
+	.services-list__item,
+	.skills-list__item{
+		display: block;
+	}
+
+
+	.main-nav__list__item{
+		font-size: 1.3em;
+	}
+	
+
+
+	.main-nav{
+		width: 60%;
+		background-color: rgba(25, 25, 25, 1);
+		position: fixed;
+		top: 0%;
+		left: 100%;
+		height: 100%;
+		z-index: 100;
+		-webkit-transition: left .3s ease;
+		-o-transition: left .3s ease;
+		transition: left .3s ease;
+		
+	}
+
+	.main-nav--mobile{
+		left: 40%;
+	}
+
+	.mobile-menu__close-icon,
+	.mobile-menu__icon{
+		color: #0BB697;
+		font-size: 30px;
+	}
+
+	.mobile-menu__close-icon{
+		color: #444;
+	}
+
+	.mobile-menu__close-icon{
+		position: absolute;
+		top: 1%;
+		left: 5%;
+	}	
+
+
+	.main-nav__list{
+		margin-top: 100px;
+
+	}
+
+	.main-nav__button{
+		margin-top: 15%;
+	}
+
+	.mobile-menu__icon{
+		position: fixed;
+		z-index: 50;
+		top: 5%;
+		
+	}
+
+	.main-nav__list__item:hover,
+	.main-nav__list__item:active{
+		background-color: #242424;
+		border: 1px solid transparent;
+	}
+
+
+	.services-list__item{
+  		margin: 20% auto 0;
+	}
+
+	.services-list__item:nth-child(3n){
+		margin-right: auto;
+	}
+
+
+	.portfolio__item:nth-child(3n){
+		margin-right: 2%;
+	}
+
+
+	.skills-list{
+		width: 60%;
+	}
+
+	.
+
+}
+
+
+
+@media screen and (max-width: 490px){
+	.portfolio__item{
+		display: block;
+		margin: 0 auto;
+		float: none;
+		margin: 60px auto 20px;
+		width: 80%;
+	}
+
+	.skills-list__item{
+		margin: 20px auto 15px;
+	}
+
+	.blog-posts__item{
+		margin-top: 60px;
+	}
+
+	.portfolio__item:nth-child(3n){
+		margin-right: auto;
+	}
+
+	.newsletter-content__signup__input::-webkit-input-placeholder{
+		padding-left: 5%;
+	}
+}
+	
